@@ -54,6 +54,24 @@
     "parent": "REQ-117.130-002"
   },
   {
+    "requirement_id": "REQ-117.130-002D",
+    "description": "Occur naturally",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-117.130-002"
+  },
+  {
+    "requirement_id": "REQ-117.130-002E",
+    "description": "Unintentionally introduced",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-117.130-002"
+  },
+  {
+    "requirement_id": "REQ-117.130-002F",
+    "description": "Intentionally introduced for economic gain",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-117.130-002"
+  },
+  {
     "requirement_id": "REQ-117.130-003A",
     "description": "(1) Evaluate identified hazards",
     "source": "21 CFR 117.130",
