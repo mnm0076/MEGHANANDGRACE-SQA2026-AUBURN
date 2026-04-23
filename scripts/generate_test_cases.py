@@ -13,35 +13,29 @@ import json
 import argparse
 import os
 
-# ---------- Arguments ----------
 parser = argparse.ArgumentParser(description="Generate test_cases.json")
 parser.add_argument("--requirements", "-r", required=True, help="requirements.json")
 parser.add_argument("--structure",    "-s", required=True, help="expected_structure.json")
 parser.add_argument("--output",       "-o", required=True, help="test_cases.json")
 args = parser.parse_args()
 
-# ---------- Load ----------
 with open(args.requirements) as f:
     requirements = json.load(f)
 
 with open(args.structure) as f:
     structure = json.load(f)
 
-# ---------- Collect selected requirement IDs from structure ----------
 selected_ids = set()
 for parent, children in structure.items():
     for child in children:
         selected_ids.add(f"{parent}{child}")
 
-# Map requirement_id → full requirement object for quick lookup
 req_map = {r["requirement_id"]: r for r in requirements}
 
-# ---------- Warn about IDs in structure that are missing from requirements ----------
 for sid in sorted(selected_ids):
     if sid not in req_map:
         print(f"WARNING: {sid} is in expected_structure but not found in requirements.json")
 
-# ---------- Generate one test case per selected requirement ----------
 test_cases = []
 
 for i, rid in enumerate(sorted(selected_ids), start=1):
@@ -80,7 +74,6 @@ for i, rid in enumerate(sorted(selected_ids), start=1):
         )
     })
 
-# ---------- Save ----------
 os.makedirs(os.path.dirname(args.output), exist_ok=True)
 
 with open(args.output, "w") as f:

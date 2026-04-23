@@ -33,20 +33,17 @@ REQUIRED_TC_FIELDS = [
 ]
 OPTIONAL_TC_FIELDS = ["steps", "notes"]
 
-# ---------- Arguments ----------
 parser = argparse.ArgumentParser(description="Validate test_cases.json")
 parser.add_argument("--testcases", "-t", required=True, help="test_cases.json")
 parser.add_argument("--structure", "-s", required=True, help="expected_structure.json")
 args = parser.parse_args()
 
-# ---------- Load ----------
 with open(args.testcases) as f:
     test_cases = json.load(f)
 
 with open(args.structure) as f:
     structure = json.load(f)
 
-# Build expected requirement IDs from structure
 expected_ids = set()
 for parent, children in structure.items():
     for child in children:
@@ -58,25 +55,21 @@ warnings = []
 covered_req_ids = set()
 seen_tc_ids     = set()
 
-# ── Check each test case ──────────────────────────────────────────────────────
 for tc in test_cases:
     tc_id = tc.get("test_case_id", "UNKNOWN")
 
-    # Check 1: Duplicate test-case IDs
     if tc_id in seen_tc_ids:
         msg = f"Duplicate test-case ID: {tc_id}"
         errors.append(msg)
         log_event("DUPLICATE_ID", msg)                   # forensick event 2
     seen_tc_ids.add(tc_id)
 
-    # Check 2: Required fields present and non-empty
     for field in REQUIRED_TC_FIELDS:
         if not tc.get(field):
             msg = f"Missing/empty field '{field}' in test case {tc_id}"
             errors.append(msg)
             log_event("SCHEMA_VALIDATION_FAILURE", msg)  # forensick event 5
 
-    # Check 3: requirement_id references a known requirement
     req_id = tc.get("requirement_id", "")
     if req_id:
         covered_req_ids.add(req_id)
@@ -85,21 +78,18 @@ for tc in test_cases:
             errors.append(msg)
             log_event("MISSING_REQUIREMENT", msg)        # forensick event 1
 
-    # Check 4: Optional fields warning (informational only)
     missing_optional = [f for f in OPTIONAL_TC_FIELDS if not tc.get(f)]
     if missing_optional:
         warnings.append(
             f"Test case {tc_id} is missing optional field(s): {missing_optional}"
         )
 
-# ── Check 5: Coverage – every expected ID has at least one test case ──────────
 uncovered = expected_ids - covered_req_ids
 for uid in sorted(uncovered):
     msg = f"Requirement not covered by any test case: {uid}"
     errors.append(msg)
     log_event("REQUIREMENT_SKIPPED", msg)                # forensick event 3
 
-# ---------- Result ----------
 print_summary()
 
 if warnings:

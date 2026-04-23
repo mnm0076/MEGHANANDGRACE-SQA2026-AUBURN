@@ -13,7 +13,6 @@ import json
 import re
 import argparse
 
-# ---------- Arguments ----------
 parser = argparse.ArgumentParser(description="Generate requirement JSON from CFR Markdown")
 parser.add_argument("--input",  "-i", required=True, help="Input Markdown file (.md)")
 parser.add_argument("--output", "-o", required=True, help="Output JSON file")
@@ -24,7 +23,6 @@ INPUT_MD    = args.input
 OUTPUT_JSON = args.output
 CFR_SECTION = args.cfr
 
-# ---------- Read File ----------
 with open(INPUT_MD, "r") as f:
     lines = [line.strip() for line in f if line.strip()]
 
@@ -32,17 +30,13 @@ requirements = []
 seen_ids     = set()
 current_req  = None
 
-# ---------- Parse ----------
 for line in lines:
 
-    # ── Detect a parent REQ anchor: "... → REQ-117.130-001" ──────────────────
     req_match = re.search(r"→\s*(REQ-[\d.]+-\d+)\s*$", line)
     if req_match:
         current_req = req_match.group(1)
         continue
 
-    # ── Detect an atomic rule: "Some description → A"  or  "... → B10" ───────
-    # Strip leading bullet chars before matching
     clean = re.sub(r"^[\*\-]\s*", "", line)
     atomic_match = re.match(r"^(.+?)\s*→\s*([A-Z]\d*)\s*$", clean)
 
@@ -51,15 +45,11 @@ for line in lines:
         suffix         = atomic_match.group(2)          # e.g. "A", "B10", "A1"
         requirement_id = f"{current_req}{suffix}"
 
-        # Skip genuine duplicates and warn
         if requirement_id in seen_ids:
             print(f"WARNING: Duplicate ID skipped – {requirement_id}")
             continue
         seen_ids.add(requirement_id)
 
-        # Parent logic:
-        #   single letter (A)   → parent is the REQ root  (REQ-117.130-001)
-        #   letter+digit (A1)   → parent is REQ root + letter (REQ-117.130-003A)
         if len(suffix) == 1:
             parent = current_req
         else:
@@ -72,7 +62,6 @@ for line in lines:
             "parent":         parent
         })
 
-# ---------- Save ----------
 import os
 os.makedirs(os.path.dirname(OUTPUT_JSON), exist_ok=True)
 
