@@ -1,0 +1,152 @@
+[
+  {
+    "test_case_id": "TC-001",
+    "requirement_id": "REQ-117.130-001A",
+    "description": "Verify that the food safety plan satisfies: (1) Conduct hazard analysis",
+    "input_data": "A written food safety plan referencing 21 CFR 117.130 under parent REQ-117.130-001",
+    "expected_output": "Requirement REQ-117.130-001A is present, documented in writing, and correctly addressed per 21 CFR 117.130",
+    "steps": [
+      "1. Open the food safety plan document.",
+      "2. Locate the section addressing: (1) Conduct hazard analysis",
+      "3. Confirm the section exists and is written (not verbal-only).",
+      "4. Verify the content satisfies 21 CFR 117.130 \u2013 REQ-117.130-001A.",
+      "5. Check that the parent requirement (REQ-117.130-001) is also addressed."
+    ],
+    "notes": "Source regulation: 21 CFR 117.130. Parent requirement: REQ-117.130-001. This is an atomic rule \u2013 test it independently."
+  },
+  {
+    "test_case_id": "TC-002",
+    "requirement_id": "REQ-117.130-001B",
+    "description": "Verify that the food safety plan satisfies: Identify known hazards",
+    "input_data": "A written food safety plan referencing 21 CFR 117.130 under parent REQ-117.130-001",
+    "expected_output": "Requirement REQ-117.130-001B is present, documented in writing, and correctly addressed per 21 CFR 117.130",
+    "steps": [
+      "1. Open the food safety plan document.",
+      "2. Locate the section addressing: Identify known hazards",
+      "3. Confirm the section exists and is written (not verbal-only).",
+      "4. Verify the content satisfies 21 CFR 117.130 \u2013 REQ-117.130-001B.",
+      "5. Check that the parent requirement (REQ-117.130-001) is also addressed."
+    ],
+    "notes": "Source regulation: 21 CFR 117.130. Parent requirement: REQ-117.130-001. This is an atomic rule \u2013 test it independently."
+  },
+  {
+    "test_case_id": "TC-003",
+    "requirement_id": "REQ-117.130-001C",
+    "description": "Verify that the food safety plan satisfies: Identify reasonably foreseeable hazards",
+    "input_data": "A written food safety plan referencing 21 CFR 117.130 under parent REQ-117.130-001",
+    "expected_output": "Requirement REQ-117.130-001C is present, documented in writing, and correctly addressed per 21 CFR 117.130",
+    "steps": [
+      "1. Open the food safety plan document.",
+      "2. Locate the section addressing: Identify reasonably foreseeable hazards",
+      "3. Confirm the section exists and is written (not verbal-only).",
+      "4. Verify the content satisfies 21 CFR 117.130 \u2013 REQ-117.130-001C.",
+      "5. Check that the parent requirement (REQ-117.130-001) is also addressed."
+    ],
+    "notes": "Source regulation: 21 CFR 117.130. Parent requirement: REQ-117.130-001. This is an atomic rule \u2013 test it independently."
+  },
+  {
+    "test_case_id": "TC-004",
+    "requirement_id": "REQ-117.130-002A",
+    "description": "Verify that the food safety plan satisfies: Biological hazards",
+    "input_data": "A written food safety plan referencing 21 CFR 117.130 under parent REQ-117.130-002",
+    "expected_output": "Requirement REQ-117.130-002A is present, documented in writing, and correctly addressed per 21 CFR 117.130",
+    "steps": [
+      "1. Open the food safety plan document.",
+      "2. Locate the section addressing: Biological hazards",
+      "3. Confirm the section exists and is written (not verbal-only).",
+      "4. Verify the content satisfies 21 CFR 117.130 \u2013 REQ-117.130-002A.",
+      "5. Check that the parent requirement (REQ-117.130-002) is also addressed."
+    ],
+    "notes": "Source regulation: 21 CFR 117.130. Parent requirement: REQ-117.130-002. This is an atomic rule \u2013 test it independently."
+  },
+  {
+    "test_case_id": "TC-005",
+    "requirement_id": "REQ-117.130-002B",
+    "description": "Verify that the food safety plan satisfies: Chemical hazards",
+    "input_data": "A written food safety plan referencing 21 CFR 117.130 under parent REQ-117.130-002",
+    "expected_output": "Requirement REQ-117.130-002B is present, documented in writing, and correctly addressed per 21 CFR 117.130",
+    "steps": [
+      "1. Open the food safety plan document.",
+      "2. Locate the section addressing: Chemical hazards",
+      "3. Confirm the section exists and is written (not verbal-only).",
+      "4. Verify the content satisfies 21 CFR 117.130 \u2013 REQ-117.130-002B.",
+      "5. Check that the parent requirement (REQ-117.130-002) is also addressed."
+    ],
+    "notes": "Source regulation: 21 CFR 117.130. Parent requirement: REQ-117.130-002. This is an atomic rule \u2013 test it independently."
+  },
+  {
+    "test_case_id": "TC-006",
+    "requirement_id": "REQ-117.130-002C",
+    "description": "Verify that the food safety plan satisfies: Physical hazards",
+    "input_data": "A written food safety plan referencing 21 CFR 117.130 under parent REQ-117.130-002",
+    "expected_output": "Requirement REQ-117.130-002C is present, documented in writing, and correctly addressed per 21 CFR 117.130",
+    "steps": [
+      "1. Open the food safety plan document.",
+      "2. Locate the section addressing: Physical hazards",
+      "3. Confirm the section exists and is written (not verbal-only).",
+      "4. Verify the content satisfies 21 CFR 117.130 \u2013 REQ-117.130-002C.",
+      "5. Check that the parent requirement (REQ-117.130-002) is also addressed."
+    ],
+    "notes": "Source regulation: 21 CFR 117.130. Parent requirement: REQ-117.130-002. This is an atomic rule \u2013 test it independently."
+  },
+  {
+    "test_case_id": "TC-007",
+    "requirement_id": "REQ-117.130-003A",
+    "description": "Verify that the food safety plan satisfies: (1) Evaluate identified hazards",
+    "input_data": "A written food safety plan referencing 21 CFR 117.130 under parent REQ-117.130-003",
+    "expected_output": "Requirement REQ-117.130-003A is present, documented in writing, and correctly addressed per 21 CFR 117.130",
+    "steps": [
+      "1. Open the food safety plan document.",
+      "2. Locate the section addressing: (1) Evaluate identified hazards",
+      "3. Confirm the section exists and is written (not verbal-only).",
+      "4. Verify the content satisfies 21 CFR 117.130 \u2013 REQ-117.130-003A.",
+      "5. Check that the parent requirement (REQ-117.130-003) is also addressed."
+    ],
+    "notes": "Source regulation: 21 CFR 117.130. Parent requirement: REQ-117.130-003. This is an atomic rule \u2013 test it independently."
+  },
+  {
+    "test_case_id": "TC-008",
+    "requirement_id": "REQ-117.130-003A1",
+    "description": "Verify that the food safety plan satisfies: (i) Assess severity and probability of hazard occurrence",
+    "input_data": "A written food safety plan referencing 21 CFR 117.130 under parent REQ-117.130-003A",
+    "expected_output": "Requirement REQ-117.130-003A1 is present, documented in writing, and correctly addressed per 21 CFR 117.130",
+    "steps": [
+      "1. Open the food safety plan document.",
+      "2. Locate the section addressing: (i) Assess severity and probability of hazard occurrence",
+      "3. Confirm the section exists and is written (not verbal-only).",
+      "4. Verify the content satisfies 21 CFR 117.130 \u2013 REQ-117.130-003A1.",
+      "5. Check that the parent requirement (REQ-117.130-003A) is also addressed."
+    ],
+    "notes": "Source regulation: 21 CFR 117.130. Parent requirement: REQ-117.130-003A. This is an atomic rule \u2013 test it independently."
+  },
+  {
+    "test_case_id": "TC-009",
+    "requirement_id": "REQ-117.130-003B",
+    "description": "Verify that the food safety plan satisfies: (2) Consider effects on safety of finished food",
+    "input_data": "A written food safety plan referencing 21 CFR 117.130 under parent REQ-117.130-003",
+    "expected_output": "Requirement REQ-117.130-003B is present, documented in writing, and correctly addressed per 21 CFR 117.130",
+    "steps": [
+      "1. Open the food safety plan document.",
+      "2. Locate the section addressing: (2) Consider effects on safety of finished food",
+      "3. Confirm the section exists and is written (not verbal-only).",
+      "4. Verify the content satisfies 21 CFR 117.130 \u2013 REQ-117.130-003B.",
+      "5. Check that the parent requirement (REQ-117.130-003) is also addressed."
+    ],
+    "notes": "Source regulation: 21 CFR 117.130. Parent requirement: REQ-117.130-003. This is an atomic rule \u2013 test it independently."
+  },
+  {
+    "test_case_id": "TC-010",
+    "requirement_id": "REQ-117.130-003B1",
+    "description": "Verify that the food safety plan satisfies: (i) Formulation of the food",
+    "input_data": "A written food safety plan referencing 21 CFR 117.130 under parent REQ-117.130-003B",
+    "expected_output": "Requirement REQ-117.130-003B1 is present, documented in writing, and correctly addressed per 21 CFR 117.130",
+    "steps": [
+      "1. Open the food safety plan document.",
+      "2. Locate the section addressing: (i) Formulation of the food",
+      "3. Confirm the section exists and is written (not verbal-only).",
+      "4. Verify the content satisfies 21 CFR 117.130 \u2013 REQ-117.130-003B1.",
+      "5. Check that the parent requirement (REQ-117.130-003B) is also addressed."
+    ],
+    "notes": "Source regulation: 21 CFR 117.130. Parent requirement: REQ-117.130-003B. This is an atomic rule \u2013 test it independently."
+  }
+]
