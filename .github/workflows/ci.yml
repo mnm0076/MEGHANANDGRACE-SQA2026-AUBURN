@@ -22,14 +22,14 @@ jobs:
       - name: Create output directory
         run: mkdir -p output
 
-      - name: "Task 1a – Generate requirements.json"
+      - name: Task 1a - Generate requirements.json
         run: |
           python scripts/generate_requirements.py \
             -i "Input CFR File/21_CFR_117.130.md" \
             -o "output/requirements.json" \
             -c "21 CFR 117.130"
 
-      - name: "Task 1b – Generate expected_structure.json"
+      - name: Task 1b - Generate expected_structure.json
         run: |
           python scripts/generate_expected_structure.py \
             -i "output/requirements.json" \
@@ -37,31 +37,23 @@ jobs:
             -s \
               REQ-117.130-001A \
               REQ-117.130-001B \
-                                               REQ-117.130-002A \
-              REQ-117.130-002B \
-              REQ-117.130-002C \
-              REQ-117.130-003A \
+              R              R              R        7.130-002A \
+              REQ-117.130              REQ-117 R              C               REQ-11717.130-003A \
               REQ-117.130-003A1 \
               REQ-117.130-003B \
               REQ-117.130-003B1
 
-      - name: "Task 2 – Generate test_cases.json"
-        run: |
-          python scripts/generate_test_cases.py \
-                                                        -s "output/expected_stru                                                 son"
-
-      - name: "      - name: "      - name: "      - n  run: |
-          python scripts/verify.py \
+      - name: Task 2 - Generate test_cases.json
+                                       /g            _cases.py \
             -r "output/requirements.json" \
-            -s "output/expected_structure.json"
-
-      - name: "Task 3b – Validate test cases"
+            -s "output/expected_structure.json"             -s "output/expected_structure.json"  -             - -            -s "output/expected_structure.json"   on scripts/verify.py \
+            -r "output/requirements.json" \
+            -s "output/expected            -s "output/expecte: Task 3b - Validate test cases
         run: |
-          python scripts/validate.py \
-            -t "output/test_cases.j            -t "output/test_cases.j       ucture.json"
+          python scripts/val          python scripts/val          python scripts/val            python scripts/val          pyth
 
       - name: Upload V&V outputs
-        uses: actions/upload-artifact@v4
+        uses: act        uses:rtifact@v4
         if: always()
         with:
           name: vv-outputs
