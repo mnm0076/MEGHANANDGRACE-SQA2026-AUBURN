@@ -1,21 +1,22 @@
 MEGHANANDGRACE-SQA2026-AUBURN
 Software Quality Assurance semester project - contributors: Meghan Murphy & Grace Robinson
+
 Included collaborators are Effat Farhana (Course instructor) and Jahidul Arafat (Course Teaching Assistant)
 
 Project Overview
 This project processes regulatory text from 21 CFR 117.130 and transforms it into structured, testable artifacts. The system parses the CFR markdown file into atomic requirements, structures relationships between them, and generates validation-ready test cases.
+
 The goal of this project is to demonstrate how regulatory requirements can be converted into machine-readable formats and verified using automated scripts and CI pipelines.
 
 Objectives
-
 Extract atomic requirements from CFR regulatory text
 Structure relationships between requirements
 Generate test cases based on selected requirements
+
 Verify that all requirements are correctly structured with no duplicate or missing IDs
 Validate that every selected requirement has full test case coverage
 Integrate forensic audit logging to track pipeline events
 Automate the full V&V pipeline using GitHub Actions CI
-
 
 Project Structure
 MEGHANANDGRACE-SQA2026-AUBURN/
@@ -38,19 +39,20 @@ MEGHANANDGRACE-SQA2026-AUBURN/
 │   └── forensick_log.json                ← Audit event log with timestamps
 └── README.md
 
-Meghan's Portion
-I was responsible for Tasks 0 (Create Project Repo) and 1 (Extract and Structure
-Requirements) and contributed to Task 2 (Generate Test Cases).
+
+Meghan's portion:
+I contributed to this project via Tasks 1was responsible for Tasks 0 (Create Project Repo) and 2 - 1 (Extract and Structure Requirements & ) and contributed to Task 2 (Generate Test Cases).
 
 Parsed the CFR 117.130 markdown file to generate requirements.json
 Developed and used generate_requirements.py to extract atomic requirements
 Structured requirement relationships in expected_requirements.json
 Ensured correct mapping between parent and child requirements
+Assisted in generating test cases from selected requirements
+Helped ensure test cases aligned with requirement intent and structure
 Contributed to test case structure and validation
 Reviewed generated test cases to ensure alignment with requirement intent
 
-
-Grace's Portion
+Grace's portion:
 I was responsible for Tasks 2 (Generate Test Cases), 3 (Verification and Validation),
 4 (Forensick Integration), and setting up the GitHub Actions CI pipeline.
 
@@ -107,5 +109,3 @@ python3 scripts/verify.py \
 python3 scripts/validate.py \
   -t "output/test_cases.json" \
   -s "output/expected_structure.json"
-
-
