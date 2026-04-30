@@ -22,11 +22,11 @@ The goal of this project is to demonstrate how regulatory requirements can be co
 
 
 
-# Meghan's portion:
+## Meghan's portion:
 
 I was responsible for Task 1 (Extract and Structure Requirements) and Task 2 (Generate Test Cases) of the project.
 
-# Grace's portion:
+## Grace's portion:
 
 
 
