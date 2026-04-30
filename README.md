@@ -24,13 +24,14 @@ The goal of this project is to demonstrate how regulatory requirements can be co
 
 ## Meghan's portion:
 
-I contributed to this project via Tasks 1 and 2 - Extract and Structure Requirements & Generate Test Cases
- - Parsed the CFR 117.130 markdown file to generate `requirements.json`
- - Developed and used `generate_requirements.py` to extract atomic requirements
- - Structured requirement relationships in `expected_requirements.json`
- - Ensured correct mapping between parent and child requirements
- - Assisted in generating test cases from selected requirements
- - Helped ensure test cases aligned with requirement intent and structure
+I was responsible for Tasks 0 (Create Project Repo) and 1 (Extract and Structure Requirements) and contributed to Task 2 (Generate Test Cases).
+
+- Parsed the CFR 117.130 markdown file to generate `requirements.json`
+- Developed and used `generate_requirements.py` to extract atomic requirements
+- Structured requirement relationships in `expected_requirements.json`
+- Ensured correct mapping between parent and child requirements
+- Contributed to test case structure and validation
+- Reviewed generated test cases to ensure alignment with requirement intent
 
 ## Grace's portion:
 
